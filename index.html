@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Kompetente Rechtsberatung, persönliche Betreuung und klare Kommunikation. Kostenlose Erstberatung in unserer Kanzlei. Schwerpunkte: Strafrecht, Strafverteidigung.">
+<title>Stirnweiss Brenner Rechtsanwälte | Kanzlei für Strafrecht Stuttgart, Strafverteidiger & Fachanwälte — Rechtsanwalt Stuttgart</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy-dark:hsl(220 45% 9%);
+  --navy:hsl(220 40% 15%);
+  --navy-mid:hsl(220 35% 22%);
+  --gold:hsl(42 80% 55%);
+  --gold-light:hsl(42 85% 70%);
+  --gold-dim:hsl(42 60% 45%);
+  --white:#ffffff;
+  --off-white:hsl(220 20% 97%);
+  --text-muted:hsl(220 15% 55%);
+  --text-dark:hsl(220 20% 18%);
+  --glass-bg:rgba(255,255,255,0.04);
+  --glass-border:rgba(255,255,255,0.08);
+  --radius:12px;
+  --radius-lg:20px;
+  --t:.35s cubic-bezier(.4,0,.2,1);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--white);color:var(--text-dark);overflow-x:hidden;line-height:1.6}
+
+/* NAVBAR */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 0;transition:var(--t)}
+.nav.scrolled{background:rgba(8,12,22,.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--glass-border);padding:14px 0}
+.nav-inner{max-width:1240px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.nav-logo svg{width:30px;height:30px;color:var(--gold)}
+.nav-brand{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;color:var(--white);max-width:210px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-links{display:flex;align-items:center;gap:30px;list-style:none}
+.nav-links a{color:rgba(255,255,255,.7);text-decoration:none;font-size:.85rem;font-weight:500;letter-spacing:.02em;transition:color var(--t)}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{background:var(--gold)!important;color:var(--navy-dark)!important;padding:8px 18px;border-radius:6px;font-weight:700!important;font-size:.78rem!important;text-transform:uppercase;letter-spacing:.05em!important;transition:background var(--t)!important}
+.nav-cta:hover{background:var(--gold-light)!important}
+
+/* HERO */
+.hero{min-height:100vh;background:var(--navy-dark);position:relative;display:flex;align-items:center;overflow:hidden}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.022) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
+.hero-glow{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(184,138,50,.13) 0%,transparent 70%);top:-100px;right:-80px;pointer-events:none}
+.hero-glow2{position:absolute;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(40,70,140,.22) 0%,transparent 70%);bottom:80px;left:-40px;pointer-events:none}
+.hero-inner{max-width:1240px;margin:0 auto;padding:120px 32px 80px;position:relative;z-index:2;width:100%}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(184,138,50,.12);border:1px solid rgba(184,138,50,.25);color:var(--gold);font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px;border-radius:100px;margin-bottom:28px;opacity:0;animation:blur-in .8s .15s forwards}
+.hero-badge span{width:7px;height:7px;border-radius:50%;background:var(--gold);display:inline-block}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,5.8vw,4.8rem);font-weight:700;line-height:1.1;color:var(--white);margin-bottom:22px;opacity:0;animation:blur-in .9s .3s forwards}
+.hero-title .gold{background:linear-gradient(135deg,var(--gold),var(--gold-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block}
+.hero-desc{font-size:1.1rem;color:rgba(255,255,255,.58);max-width:540px;line-height:1.8;margin-bottom:40px;font-weight:300;opacity:0;animation:blur-in 1s .45s forwards}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:64px;opacity:0;animation:blur-in 1s .6s forwards}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--navy-dark);padding:14px 30px;border-radius:var(--radius);font-weight:700;font-size:.9rem;text-decoration:none;transition:all var(--t);border:none;cursor:pointer;letter-spacing:.01em}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 28px rgba(184,138,50,.35)}
+.btn-outline{display:inline-flex;align-items:center;gap:8px;background:transparent;color:rgba(255,255,255,.82);padding:14px 30px;border-radius:var(--radius);font-weight:500;font-size:.9rem;text-decoration:none;transition:all var(--t);border:1px solid rgba(255,255,255,.2)}
+.btn-outline:hover{border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.06);transform:translateY(-1px)}
+.hero-stats{display:flex;gap:18px;flex-wrap:wrap;opacity:0;animation:blur-in 1s .75s forwards}
+.stat-card{background:var(--glass-bg);border:1px solid var(--glass-border);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding:18px 26px;border-radius:var(--radius-lg);flex:1;max-width:190px}
+.stat-num{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:700;color:var(--gold);line-height:1;margin-bottom:5px}
+.stat-lbl{font-size:.72rem;color:rgba(255,255,255,.45);font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+
+/* SECTIONS */
+.section{padding:96px 0}
+.container{max-width:1240px;margin:0 auto;padding:0 32px}
+.sec-lbl{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+.sec-lbl.gold{color:var(--gold)}
+.sec-lbl.muted{color:var(--text-muted)}
+.divider{width:44px;height:3px;background:var(--gold);border-radius:2px;margin-bottom:18px}
+.sec-h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.2vw,2.6rem);font-weight:700;line-height:1.2;margin-bottom:14px}
+.sec-h2.light{color:var(--white)}
+.sec-h2.dark{color:var(--text-dark)}
+.sec-sub{font-size:.97rem;max-width:500px;line-height:1.75;font-weight:300}
+.sec-sub.light{color:rgba(255,255,255,.55)}
+.sec-sub.dark{color:var(--text-muted)}
+.sec-head{margin-bottom:52px}
+
+/* RECHTSGEBIETE */
+#rechtsgebiete{background:var(--white)}
+.areas-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:18px}
+.area-card{background:var(--off-white);border:1px solid rgba(0,0,0,.06);border-radius:var(--radius-lg);padding:26px 22px 22px;transition:all var(--t);position:relative;overflow:hidden;cursor:default}
+.area-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold-light));transform:scaleX(0);transform-origin:left;transition:transform var(--t)}
+.area-card:hover{transform:translateY(-4px);border-color:rgba(184,138,50,.2);box-shadow:0 12px 36px rgba(0,0,0,.08)}
+.area-card:hover::before{transform:scaleX(1)}
+.area-icon{font-size:1.6rem;margin-bottom:12px;display:block}
+.area-card h3{font-family:'Playfair Display',serif;font-size:.97rem;font-weight:600;color:var(--text-dark);line-height:1.3}
+
+/* SERVICES */
+#leistungen{background:var(--off-white)}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:22px}
+.svc-card{background:var(--white);border:1px solid rgba(0,0,0,.06);border-radius:var(--radius-lg);padding:34px 30px;transition:all var(--t);position:relative;overflow:hidden}
+.svc-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-light));transform:scaleX(0);transform-origin:left;transition:transform var(--t)}
+.svc-card:hover{box-shadow:0 14px 42px rgba(0,0,0,.1);transform:translateY(-4px)}
+.svc-card:hover::after{transform:scaleX(1)}
+.svc-num{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:700;color:rgba(184,138,50,.15);line-height:1;margin-bottom:18px;user-select:none}
+.svc-card h3{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:600;color:var(--text-dark);margin-bottom:10px;line-height:1.3}
+.svc-card p{font-size:.87rem;color:var(--text-muted);line-height:1.75;margin-bottom:18px;font-weight:300}
+.svc-price{display:inline-flex;align-items:center;background:rgba(184,138,50,.08);border:1px solid rgba(184,138,50,.2);color:var(--gold-dim);font-size:.75rem;font-weight:700;letter-spacing:.05em;padding:5px 12px;border-radius:100px}
+
+/* ABOUT */
+#kanzlei{background:var(--navy-dark)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.about-text{color:rgba(255,255,255,.62);line-height:1.85;font-size:.97rem;font-weight:300;margin-bottom:32px}
+.about-feats{list-style:none;display:flex;flex-direction:column;gap:11px}
+.about-feats li{display:flex;align-items:center;gap:12px;color:rgba(255,255,255,.72);font-size:.87rem}
+.feat-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.about-card{background:var(--glass-bg);border:1px solid var(--glass-border);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-radius:var(--radius-lg);padding:38px}
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.a-stat{text-align:center;padding:20px;border-radius:var(--radius);background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);transition:var(--t)}
+.a-stat:hover{background:rgba(184,138,50,.06);border-color:rgba(184,138,50,.15)}
+.a-stat-n{font-family:'Playfair Display',serif;font-size:2.1rem;font-weight:700;color:var(--gold);display:block;line-height:1;margin-bottom:5px}
+.a-stat-l{font-size:.72rem;color:rgba(255,255,255,.42);text-transform:uppercase;letter-spacing:.07em;font-weight:600}
+
+/* REVIEWS */
+#bewertungen{background:var(--off-white)}
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:22px}
+.rev-card{background:var(--white);border:1px solid rgba(0,0,0,.06);border-radius:var(--radius-lg);padding:30px;transition:var(--t)}
+.rev-card:hover{box-shadow:0 10px 32px rgba(0,0,0,.08);transform:translateY(-3px)}
+.rev-stars{display:flex;gap:2px;margin-bottom:14px;color:var(--gold);font-size:.88rem}
+.rev-text{font-size:.92rem;color:var(--text-muted);line-height:1.75;font-weight:300;font-style:italic;margin-bottom:18px}
+.rev-author{font-weight:600;font-size:.83rem;color:var(--text-dark)}
+.rev-date{font-size:.75rem;color:var(--text-muted);margin-top:3px}
+
+/* KONTAKT */
+#kontakt{background:var(--white)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:start}
+.contact-item{display:flex;gap:14px;align-items:flex-start;margin-bottom:26px}
+.contact-ico{width:40px;height:40px;border-radius:var(--radius);background:rgba(184,138,50,.1);border:1px solid rgba(184,138,50,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.95rem}
+.contact-lbl{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:3px}
+.contact-val{font-size:.92rem;color:var(--text-dark);font-weight:500}
+.contact-val a{color:inherit;text-decoration:none}
+.contact-val a:hover{color:var(--gold-dim)}
+.c-form{background:var(--off-white);border:1px solid rgba(0,0,0,.06);border-radius:var(--radius-lg);padding:38px}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.f-grp{margin-bottom:14px}
+.f-grp label{display:block;font-size:.76rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text-muted);margin-bottom:7px}
+.f-grp input,.f-grp textarea,.f-grp select{width:100%;background:var(--white);border:1px solid rgba(0,0,0,.1);border-radius:var(--radius);padding:11px 15px;font-family:'Inter',sans-serif;font-size:.88rem;color:var(--text-dark);transition:border-color var(--t),box-shadow var(--t);outline:none}
+.f-grp input:focus,.f-grp textarea:focus,.f-grp select:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(184,138,50,.1)}
+.f-grp textarea{resize:vertical;min-height:95px}
+.f-submit{width:100%;background:var(--navy-dark);color:var(--white);border:none;padding:13px 30px;border-radius:var(--radius);font-family:'Inter',sans-serif;font-size:.88rem;font-weight:700;letter-spacing:.04em;cursor:pointer;transition:all var(--t);display:flex;align-items:center;justify-content:center;gap:8px}
+.f-submit:hover{background:var(--navy-mid);transform:translateY(-2px);box-shadow:0 8px 22px rgba(10,14,26,.25)}
+.f-note{text-align:center;font-size:.73rem;color:var(--text-muted);margin-top:10px}
+
+/* TRUST BAR */
+.trust-bar{background:var(--navy);padding:26px 0;border-top:1px solid var(--glass-border);border-bottom:1px solid var(--glass-border)}
+.trust-inner{max-width:1240px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:center;gap:44px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:9px;color:rgba(255,255,255,.58);font-size:.82rem;font-weight:500}
+.trust-item svg{color:var(--gold);width:15px;height:15px;flex-shrink:0}
+
+/* FOOTER */
+footer{background:var(--navy-dark);border-top:1px solid var(--glass-border);padding:60px 0 28px}
+.foot-inner{max-width:1240px;margin:0 auto;padding:0 32px}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;margin-bottom:44px}
+.foot-brand{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:var(--white);margin-bottom:10px;display:flex;align-items:center;gap:9px}
+.foot-brand svg{color:var(--gold);width:18px;height:18px}
+.foot-tag{font-size:.85rem;color:rgba(255,255,255,.38);line-height:1.65;font-weight:300;max-width:270px}
+.foot-col-h{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.foot-links{list-style:none;display:flex;flex-direction:column;gap:9px}
+.foot-links a{color:rgba(255,255,255,.4);text-decoration:none;font-size:.82rem;transition:color var(--t);font-weight:300}
+.foot-links a:hover{color:rgba(255,255,255,.8)}
+.foot-bottom{border-top:1px solid var(--glass-border);padding-top:22px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px}
+.foot-copy{font-size:.75rem;color:rgba(255,255,255,.28);font-weight:300}
+.foot-legal{display:flex;gap:22px}
+.foot-legal a{font-size:.75rem;color:rgba(255,255,255,.32);text-decoration:none;transition:color var(--t);font-weight:300}
+.foot-legal a:hover{color:rgba(255,255,255,.7)}
+
+/* ANIMATIONS */
+@keyframes blur-in{from{opacity:0;filter:blur(8px);transform:translateY(12px)}to{opacity:1;filter:blur(0);transform:translateY(0)}}
+.rv{opacity:0;transform:translateY(20px);transition:opacity .55s ease,transform .55s ease}
+.rv.visible{opacity:1;transform:translateY(0)}
+.rv-d1{transition-delay:.06s}.rv-d2{transition-delay:.12s}.rv-d3{transition-delay:.18s}
+.rv-d4{transition-delay:.24s}.rv-d5{transition-delay:.3s}.rv-d6{transition-delay:.36s}
+.rv-d7{transition-delay:.42s}.rv-d8{transition-delay:.48s}
+
+/* RESPONSIVE */
+@media(max-width:900px){.about-grid,.contact-grid{grid-template-columns:1fr;gap:36px}.foot-grid{grid-template-columns:1fr 1fr;gap:28px}.nav-links{display:none}.hero-stats{flex-direction:column;max-width:300px}.stat-card{max-width:100%}.f-row{grid-template-columns:1fr}.trust-inner{gap:20px}}
+@media(max-width:600px){.foot-grid{grid-template-columns:1fr}.section{padding:60px 0}.hero-inner{padding:95px 20px 55px}.container{padding:0 20px}.c-form{padding:24px 18px}}
+
+.role-toggle{display:flex;border-radius:14px;border:1px solid rgba(0,0,0,.08);background:rgba(0,0,0,.03);padding:4px;margin-bottom:24px;gap:4px}
+.role-btn{flex:1;padding:10px;font-family:'Inter',sans-serif;font-size:.83rem;font-weight:600;border:none;border-radius:10px;cursor:pointer;transition:all var(--t);color:var(--text-muted);background:transparent}
+.role-btn.active{background:var(--navy-dark);color:var(--white);box-shadow:0 4px 12px rgba(10,14,26,.2)}
+.pw-toggle{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:var(--text-muted);font-size:.85rem;transition:color var(--t)}
+.pw-toggle:hover{color:var(--text-dark)}
+@media(max-width:768px){.portal-left{display:none}.portal-right{padding:32px 24px}}
+</style>
+
+    <style>
+    /* SYSTEMS v4 — Unique Color Override */
+    :root {
+      --accent: #0F766E !important;
+      --accent-hover: #115E59 !important;
+    }
+    /* Fix SVG icon sizing globally */
+    .cb svg, .contact-btn svg, .btn svg { width: 20px !important; height: 20px !important; flex-shrink: 0; }
+    .nav-cta svg { width: 16px !important; height: 16px !important; }
+    .ft-social svg { width: 14px !important; height: 14px !important; }
+    .review-stars svg { width: 20px !important; height: 20px !important; }
+    </style>
+    </head>
+<body>
+
+<nav class="nav" id="navbar">
+  <div class="nav-inner">
+    <a href="#top" class="nav-logo">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 3L4 9v8c0 5.5 5.1 10.7 12 12 6.9-1.3 12-6.5 12-12V9L16 3z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M11 16l3.5 3.5L21 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="nav-brand">Stirnweiss Brenner Rechtsanwälte | Kanzlei für Strafrecht Stuttgart, Strafverteidiger & Fachanwälte</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#rechtsgebiete">Rechtsgebiete</a></li>
+      <li><a href="#leistungen">Leistungen</a></li>
+      <li><a href="#kanzlei">Kanzlei</a></li>
+      <li><a href="#bewertungen">Bewertungen</a></li>
+      <li><a href="login.html" class="nav-cta">&#9878; Mandanten-Portal</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div class="hero-inner">
+    <div class="hero-badge"><span></span> Rechtsanwalt &middot; Stuttgart</div>
+    <h1 class="hero-title"><span class="gold">Durchdacht. Entschlossen. <em>Erfolgreich.</em></span></h1>
+    <p class="hero-desc">Kompetente Rechtsberatung, persönliche Betreuung und klare Kommunikation. Kostenlose Erstberatung in unserer Kanzlei. Schwerpunkte: Strafrecht, Strafverteidigung.</p>
+    <div class="hero-actions">
+      <a href="tel:07118498770" class="btn-primary">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.49 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.86a16 16 0 0 0 6.8 6.8l1.06-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        0711 8498770 anrufen
+      </a>
+      <a href="#kontakt" class="btn-outline">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Kostenlose Erstberatung
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-card"><div class="stat-num">100%</div><div class="stat-lbl">Diskretion</div></div>
+      <div class="stat-card"><div class="stat-num">24h</div><div class="stat-lbl">Erreichbarkeit</div></div>
+      <div class="stat-card"><div class="stat-num">&#9733; 5.0</div><div class="stat-lbl">Mandanten-Rating</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Zugelassen bei allen Amts- &amp; Landgerichten</div>
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>Schnelle Reaktionszeiten</div>
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>Pers&ouml;nliche Betreuung</div>
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Erstberatung kostenlos</div>
+  </div>
+</div>
+
+<section class="section" id="rechtsgebiete" style="background:var(--white)">
+  <div class="container">
+    <div class="sec-head rv">
+      <p class="sec-lbl gold">Fachgebiete</p>
+      <div class="divider"></div>
+      <h2 class="sec-h2 dark">Unsere Rechtsgebiete</h2>
+      <p class="sec-sub dark">Kompetente rechtliche Vertretung in allen relevanten Bereichen &mdash; f&uuml;r Privatpersonen und Unternehmen.</p>
+    </div>
+    <div class="areas-grid"><div class="area-card rv rv-d1"><div class="area-icon">⚔️</div><h3>Strafrecht</h3></div><div class="area-card rv rv-d2"><div class="area-icon">🔒</div><h3>Strafverteidigung</h3></div><div class="area-card rv rv-d3"><div class="area-icon">⚖️</div><h3>Revisionsrecht</h3></div><div class="area-card rv rv-d4"><div class="area-icon">⚖️</div><h3>Bewährungswiderruf</h3></div></div>
+  </div>
+</section>
+
+<section class="section" id="leistungen" style="background:var(--off-white)">
+  <div class="container">
+    <div class="sec-head rv">
+      <p class="sec-lbl muted">Was wir bieten</p>
+      <div class="divider"></div>
+      <h2 class="sec-h2 dark">Unsere Leistungen</h2>
+      <p class="sec-sub dark">Ma&szlig;geschneiderte rechtliche L&ouml;sungen &mdash; transparent, effizient und auf Ihren Erfolg ausgerichtet.</p>
+    </div>
+    <div class="svc-grid"><div class="svc-card"><div class="svc-num">01</div><h3>Erstberatung</h3><p>In 30 Minuten wissen Sie, wo Sie stehen — und ob sich ein Vorgehen lohnt.</p><div class="svc-price">kostenlos</div></div><div class="svc-card"><div class="svc-num">02</div><h3>Strafrecht</h3><p>Beschuldigung, Ermittlungsverfahren, Anklage — frühzeitige Verteidigung ist entscheidend.</p><div class="svc-price">nach RVG</div></div><div class="svc-card"><div class="svc-num">03</div><h3>Strafverteidigung</h3><p>Schweigen ist Gold. Wir beraten Sie sofort, bevor Sie eine Aussage machen.</p><div class="svc-price">nach RVG</div></div><div class="svc-card"><div class="svc-num">04</div><h3>Revisionsrecht</h3><p>Kompetente rechtliche Beratung und Vertretung im Bereich Revisionsrecht.</p><div class="svc-price">nach RVG</div></div></div>
+  </div>
+</section>
+
+<section class="section" id="kanzlei" style="background:var(--navy-dark)">
+  <div class="container">
+    <div class="about-grid">
+      <div class="rv">
+        <p class="sec-lbl gold">&Uuml;ber die Kanzlei</p>
+        <div class="divider"></div>
+        <h2 class="sec-h2 light">Stirnweiss Brenner Rechtsanwälte | Kanzlei für Strafrecht Stuttgart, Strafverteidiger & Fachanwälte</h2>
+        <div class="about-text"><p>Unsere Kanzlei in Stuttgart steht für kompetente Rechtsberatung mit persönlichem Engagement. Mit Schwerpunkt auf Strafrecht und Strafverteidigung begleiten wir unsere Mandanten durch alle Phasen des rechtlichen Verfahrens — von der ersten Beratung bis zum erfolgreichen Abschluss. Transparente Kommunikation, realistische Einschätzungen und konsequente Interessenvertretung sind unsere Grundsätze.</p></div>
+        <ul class="about-feats">
+          <li><span class="feat-dot"></span>Pers&ouml;nliche Beratung auf h&ouml;chstem Niveau</li>
+          <li><span class="feat-dot"></span>Spezialisierung auf komplexe Rechtsfragen</li>
+          <li><span class="feat-dot"></span>Transparente Kostenstruktur ohne versteckte Geb&uuml;hren</li>
+          <li><span class="feat-dot"></span>Langj&auml;hrige Erfahrung in Stuttgart und Umgebung</li>
+        </ul>
+      </div>
+      <div class="about-card rv rv-d2">
+        <div class="about-stats">
+          <div class="a-stat"><span class="a-stat-n">15+</span><span class="a-stat-l">Jahre Erfahrung</span></div>
+          <div class="a-stat"><span class="a-stat-n">500+</span><span class="a-stat-l">Mandanten betreut</span></div>
+          <div class="a-stat"><span class="a-stat-n">98%</span><span class="a-stat-l">Zufriedenheit</span></div>
+          <div class="a-stat"><span class="a-stat-n">&#9733; 4.9</span><span class="a-stat-l">Google-Bewertung</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="bewertungen" style="background:var(--off-white)">
+  <div class="container">
+    <div class="sec-head rv">
+      <p class="sec-lbl muted">Was Mandanten sagen</p>
+      <div class="divider"></div>
+      <h2 class="sec-h2 dark">Bewertungen &amp; Erfahrungen</h2>
+    </div>
+    <div class="reviews-grid" style="max-width:500px;margin:32px auto 0"><div class="rev-card" style="text-align:center"><div class="rev-stars" style="justify-content:center;font-size:1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div style="font-size:2.4rem;font-weight:700;color:var(--navy-dark);margin:12px 0 4px;font-family:'Playfair Display',serif">5.0</div><p class="rev-text" style="margin-bottom:8px">Durchschnittliche Bewertung auf Google</p><div class="rev-author">&#9733; Google-Bewertungen · 193 Bewertungen</div></div></div>
+  </div>
+</section>
+
+<section class="section" id="kontakt" style="background:var(--white)">
+  <div class="container">
+    <div class="sec-head rv">
+      <p class="sec-lbl gold">Kontakt</p>
+      <div class="divider"></div>
+      <h2 class="sec-h2 dark">Jetzt Beratung anfragen</h2>
+      <p class="sec-sub dark">Schildern Sie uns Ihr Anliegen &mdash; wir melden uns innerhalb von 24 Stunden bei Ihnen.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="rv">
+        <div class="contact-item">
+          <div class="contact-ico">&#128222;</div>
+          <div><div class="contact-lbl">Telefon</div><div class="contact-val"><a href="tel:07118498770">0711 8498770</a></div></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-ico">&#9993;</div>
+          <div><div class="contact-lbl">E-Mail</div><div class="contact-val"><a href="mailto:info@stirnweiss-brenner.de">info@stirnweiss-brenner.de</a></div></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-ico">&#128205;</div>
+          <div><div class="contact-lbl">Adresse</div><div class="contact-val">Berliner Straße 38, Nuremberg</div></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-ico">&#9878;</div>
+          <div><div class="contact-lbl">Erstberatung</div><div class="contact-val">Kostenlos &amp; unverbindlich</div></div>
+        </div>
+      </div>
+      <div class="c-form rv rv-d2">
+        <form id="cform">
+          <div class="f-row">
+            <div class="f-grp"><label>Vorname</label><input type="text" placeholder="Max" required></div>
+            <div class="f-grp"><label>Nachname</label><input type="text" placeholder="Mustermann" required></div>
+          </div>
+          <div class="f-grp"><label>E-Mail</label><input type="email" placeholder="ihre@email.de" required></div>
+          <div class="f-grp"><label>Telefon (optional)</label><input type="tel" placeholder="+49 ..."></div>
+          <div class="f-grp"><label>Rechtsgebiet</label>
+            <select><option value="">Bitte w&auml;hlen...</option><option>Arbeitsrecht</option><option>Familienrecht</option><option>Strafrecht</option><option>Mietrecht</option><option>Vertragsrecht</option><option>Erbrecht</option><option>Sonstiges</option></select>
+          </div>
+          <div class="f-grp"><label>Ihr Anliegen</label><textarea placeholder="Beschreiben Sie kurz Ihr rechtliches Anliegen..." required></textarea></div>
+          <button type="submit" class="f-submit">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Anfrage senden
+          </button>
+          <p class="f-note">&#128274; Ihre Daten werden vertraulich behandelt.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><svg viewBox="0 0 32 32" fill="none"><path d="M16 3L4 9v8c0 5.5 5.1 10.7 12 12 6.9-1.3 12-6.5 12-12V9L16 3z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>Stirnweiss Brenner Rechtsanwälte | Kanzlei für Strafrecht Stuttgart, Strafverteidiger & Fachanwälte</div>
+        <p class="foot-tag"><function build_website.<locals>.<lambda> at 0x711f28f7ac00> &mdash; Ihr Rechtsanwalt in Stuttgart.</p>
+      </div>
+      <div>
+        <p class="foot-col-h">Kanzlei</p>
+        <ul class="foot-links"><li><a href="#rechtsgebiete">Rechtsgebiete</a></li><li><a href="#leistungen">Leistungen</a></li><li><a href="#kanzlei">&Uuml;ber uns</a></li><li><a href="#bewertungen">Bewertungen</a></li></ul>
+      </div>
+      <div>
+        <p class="foot-col-h">Kontakt</p>
+        <ul class="foot-links"><li><a href="tel:07118498770">0711 8498770</a></li><li><a href="mailto:info@stirnweiss-brenner.de">info@stirnweiss-brenner.de</a></li><li><a href="#kontakt">Beratungsanfrage</a></li></ul>
+      </div>
+      <div>
+        <p class="foot-col-h">Rechtliches</p>
+        <ul class="foot-links"><li><a href="#kontakt" title="Demo-Website — Impressum wird bei Beauftragung eingerichtet">Impressum</a></li><li><a href="#kontakt" title="Demo-Website — Datenschutz wird bei Beauftragung eingerichtet">Datenschutz</a></li></ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p class="foot-copy">&copy; 2026 Stirnweiss Brenner Rechtsanwälte | Kanzlei für Strafrecht Stuttgart, Strafverteidiger & Fachanwälte &middot; Alle Rechte vorbehalten</p>
+      <div class="foot-legal"><a href="#kontakt">Impressum</a><a href="#kontakt">Datenschutz</a><span style="opacity:.4;font-size:.75rem;margin-left:12px">· Demo-Website</span></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Navbar scroll
+  var nav=document.getElementById('navbar');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>40)},{passive:true});
+
+  // Scroll reveal
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});
+  },{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){obs.observe(el);});
+
+  // Form
+  var f=document.getElementById('cform');
+  if(f){f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var btn=f.querySelector('.f-submit');
+    btn.textContent='Anfrage gesendet \u2014 Wir melden uns bald!';
+    btn.style.background='#2d6a4f';
+    btn.disabled=true;
+  });}
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var t=document.querySelector(a.getAttribute('href'));
+      if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
+    });
+  });
+
+  
+  
+  
+  
+</script>
+
+</body>
+</html>
